@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+    <script src="/lib/jquery.js"></script> <!-- Jquery in the parent folder-->
+    <link rel="stylesheet" type="text/css" href="CalculatorStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Calculator for Ecosia</title>
+</head>
+
+<body>
+        <div id="calculator">
+            <div class="output-normal output-hover" id="results">
+                    <div id="upper">
+                        <button id="historybutton">
+                            <i id="historyicon" class="material-icons">history</i>
+                            <i id="historyicongreen" class="material-icons">history</i>
+                        </button>
+
+                        <div id="historydropdown">
+                            <div id="historycontents"></div>
+                        </div>
+
+                        <div id="history">
+                            <p id="history-value"></p>
+                        </div>
+                    </div>
+                    <div id="lower">
+                        <div id="output">
+                            <p id="output-value" spellcheck="false" tabindex="1" contenteditable="true"></p>
+                        </div>
+                    </div>
+                   </div>
+            <div id="keyboard">
+                <button class="operator" id="RadDeg">
+                    <p id="RadUpper">Rad</p>
+                    <p id="RadLower">Deg</p>
+               </button>
+
+                <button class="operator" value="%" id="%">%</button>
+                <button class="operator" value="!" id="!">x!</button>
+                <button class="operator" value="()" id="(">&#x207D;</button>
+                <button class="operator" value=")" id=")">&#x207E;</button>
+                <button class="operator" id="clear">C</button>
+                <button class="operator" id="backspace">CE</button>
+
+                <button class="operator" id="Inverse">Inv</button>
+                <button class="operator" value="sin()" id="sin">sin</button>
+                <button class="operator" value="ln()" id="ln">ln</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operator" value="/" id="/">&#247;</button>
+
+                <button class="operator" value="&#x3C0;" id="pi">&#960;</button>
+                <button class="operator" value="cos()" id="cos">cos</button>
+                <button class="operator" value="log()" id="log">log</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operator" value="&times;" id="*">&times;</button>
+
+                <button class="operator" value="e^" id="e^">e</button>
+                <button class="operator" value="tan()" id="tan">tan</button>
+                <button class="operator" value="&#x221A;()" id="sqrt">&#x221A;</button>
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operator" value="-" id="-">-</button>
+
+                <button class="operator" value="Ans" id="Ans">Ans</button>
+                <button class="operator" value="E" id="E">Exp</button>
+                <button class="operator" value="^" id="x^y">x^y</button>
+                <button class="number" id="0">0</button>
+                <button class="number" id=".">.</button>
+                <button class="operator" value="=" id="=">=</button>
+                <button class="operator" value="+" id="+">+</button>
+
+            </div>
+        </div>
+    </div>
+    <script src="CalcFunctions/factorial.js"></script>
+    <script src="CalcFunctions/nicelook.js"></script>
+    <script src="CalcFunctions/numformat.js"></script>
+    <script src="CalcFunctions/pow.js"></script>
+    <script src="CalculatorInterface.js"></script>
+    <script src="OnTyping.js"></script>
+    <script src="Calculate.js"></script>
+</body>
+
+</html>

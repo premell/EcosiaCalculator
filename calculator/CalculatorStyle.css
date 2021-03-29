@@ -1,0 +1,350 @@
+/*This is the first thing I've ever done in css, and I think it shows
+
+Also I just realized that the font of the erase button "C" gets bigger when hovered over and the "CE" buttons font gets smaller,
+while no other fonts change on hover*/
+
+#myOwnCustomFirstToolbar12345 {
+  position: relative;
+  user-select: none;
+
+  width: 640px;
+  height: 340px;
+  left: 0;
+
+  border-width: 0px;
+  margin-bottom: 20px;
+}
+#calculator {
+  position: absolute;
+  user-select: none;
+
+  width: 630px;
+  height: 328px;
+  left: 0;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #dcdcdc;
+  border-width: 1px;
+}
+#results {
+  position: absolute;
+
+  width: 570px;
+  height: 60px;
+  margin-top: 16px;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 14px;
+
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+}
+#upper {
+  position: relative;
+
+  width: 570px;
+  height: 20px;
+}
+#historybutton {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+
+  height: 22px;
+  width: 22px;
+
+  outline: none;
+  border-width: 0px;
+  background-color: #ffffff;
+}
+#historyicon {
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  color: #797979;
+}
+#historyicon:hover {
+  color: #000000;
+}
+#historyicongreen {
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  color: rgb(97, 214, 19);
+  display: none;
+}
+#historydropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+  background: #ffffff;
+  left: -15px;
+  top: -15px;
+
+  max-width: 620px;
+  min-width: 250px;
+  border-radius: 8px;
+}
+#historycontents {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  margin-top: 50px;
+  min-height: 160px;
+  max-height: 280px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.HistoryElement {
+  z-index: 3;
+
+  cursor: pointer;
+  display: inline-block;
+
+  margin-top: 16px;
+  margin-left: 11.5px;
+  margin-right: 11.5px;
+
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  border-radius: 10%;
+  border-width: 1;
+  font-weight: 549;
+  font-size: 14px;
+  border-color: rgb(207, 207, 207);
+  border-style: solid;
+
+  background-color: rgb(245, 245, 245);
+}
+.HistoryElement:hover {
+  background-color: rgb(236, 235, 235);
+}
+.HistoryElement:active {
+  border-color: #919191;
+}
+#history {
+  position: relative;
+  width: 570px;
+  height: 20px;
+
+  text-indent: 600px;
+  text-align: right;
+  font-size: 13px;
+  color: #919191;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  text-indent: 594px;
+  font-family: arial, sans-serif;
+
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: clip;
+}
+#output-value {
+  /*its kind of irritating how you cannot click to the very right when selecting text.
+	(ive put 14px of margin and this isnt counted as "output-value" and therefore you can focus
+	the text from the very right but you cannot mark the text). Maybe worth to remove the margin and 
+	make it artifically, even though its ugly*/
+  position: relative;
+  width: 570px;
+  height: 32px;
+  margin: 0;
+
+  outline: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 30px;
+
+  /*Im not sure what font to use yet*/
+  font-family: arial, sans-serif;
+
+  text-indent: 600px;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: clip;
+}
+.output-hover:hover {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  border-color: #919191;
+}
+.output-normal {
+  border-color: #dcdcdc;
+}
+.output-blue {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  border-color: #4d90fe;
+}
+#keyboard {
+  position: relative;
+  top: 99px;
+  height: 220px;
+  width: 602px;
+  margin-left: 16px;
+  margin-right: 14px;
+}
+.operator,
+.number {
+  margin: 4px;
+  width: 78px;
+  height: 36px;
+  float: left;
+  border-radius: 8%;
+  border-width: 0;
+  font-weight: 549;
+  font-size: 15px;
+}
+.number {
+  /*maybe just want one color scale, either # or rgb, so it dosent have to load both?*/
+  background-color: rgb(245, 245, 245);
+}
+.operator {
+  background-color: rgb(228, 228, 228);
+  background-color: rgb(228, 228, 228);
+}
+.number,
+.operator {
+  cursor: pointer;
+}
+.operator:active,
+.number:active {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #adadad;
+}
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: 0;
+}
+.number:active {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
+}
+.operator:active {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(173, 173, 173);
+}
+.number:hover {
+  background-color: rgb(236, 235, 235);
+}
+.operator:hover {
+  background-color: rgb(207, 207, 207);
+}
+button:nth-child(7) {
+  font-size: 17px;
+  background-color: #20b2ab81;
+}
+button:nth-child(14) {
+  font-size: 20px;
+  background-color: #ffa60062;
+}
+button:nth-child(21) {
+  font-size: 20px;
+  background-color: #f080806b;
+}
+button:nth-child(28) {
+  font-size: 20px;
+  background-color: #7d92e071;
+}
+button:nth-child(4) {
+  font-size: 30px;
+}
+button:nth-child(5) {
+  font-size: 30px;
+}
+button:nth-child(33) {
+  font-size: 30px;
+}
+button:nth-child(34) {
+  font-size: 20px;
+  background-color: #65e433a4;
+}
+button:nth-child(35) {
+  font-size: 20px;
+  background-color: #9477af60;
+}
+button:nth-child(34) {
+  font-size: 20px;
+  background-color: #65e433a4;
+}
+button:nth-child(6) {
+  font-size: 17px;
+  background-color: #a84a9c46;
+}
+button:nth-child(6):hover {
+  font-size: 20px;
+  background-color: #a84a9b8a;
+}
+button:nth-child(7):hover {
+  font-size: 15px;
+  background-color: #20b2abb0;
+}
+button:nth-child(14):hover {
+  font-size: 20px;
+  background-color: #ffa60094;
+}
+button:nth-child(21):hover {
+  font-size: 20px;
+  background-color: #f08080a2;
+}
+button:nth-child(28):hover {
+  font-size: 20px;
+  background-color: #7d92e09d;
+}
+button:nth-child(35):hover {
+  font-size: 20px;
+  background-color: #9477af93;
+}
+button:nth-child(34):hover {
+  font-size: 20px;
+  background-color: #65e433c5;
+}
+
+#RadUpper {
+  bottom: 11px;
+  align-items: center;
+  font-size: 15px;
+  position: relative;
+}
+#RadLower {
+  bottom: 28px;
+  align-items: center;
+  font-size: 11px;
+  position: relative;
+}
+
+.trig-color {
+  background-color: rgb(189, 189, 189);
+}
+.trig-hover:hover {
+  background-color: rgb(207, 207, 207);
+}
+.trigactive-hover:hover {
+  background-color: rgb(168, 168, 168);
+}
